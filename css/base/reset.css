@@ -1,0 +1,46 @@
+/*
+==================================
+RESET CSS STYLES
+==================================
+*/
+
+/* Remove default margin, padding, and set box-sizing */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Allow for percentages */
+html, body {
+    height: 100%;
+}
+
+/* Improve readability and accessibility */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove default font issues */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Prevent overflow issues */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Proper root stacking context */
+#root, #__next {
+    isolation: isolate;
+}

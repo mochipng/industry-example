@@ -1,0 +1,81 @@
+/*
+==================================
+TYPOGRAPHY AND VARIABLES
+==================================
+*/
+
+:root {
+    /* Font stack */
+    --font-main: system-ui, 'Segoe UI', Roboto, Helvetica, sans-serif;
+
+    /* Font scaling */
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-xxl: 2rem;
+
+    /* Branding colors */
+    --color-primary: #4F46E5;
+    --color-primary-dark: #3730A3;
+    --color-secondary: #10B981;
+    --color-accent: #F59E0B;
+    --color-text: #1F2937;
+
+    /* Neutral colors */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray-light: #F3F4F6;
+    --color-gray-dark: #111827;
+
+    /* Spacing scaling */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Utilities */
+    --radius-md: 8px;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    /* Line heights */
+    --lh-body: 1.6;
+    --lh-heading: 1.2;
+}
+
+/* Typography defaults */
+
+body {
+    font-family: var(--font-main);
+    line-height: var(--lh-body);
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: var(--lh-heading);
+    color: var(--color-gray-dark);
+}
+
+h1 {font-size: var(--text-xxl);}
+h2 {font-size: var(--text-xl);}
+h3 {font-size: var(--text-lg);}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+
+    transition: color 0.2s ease;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    color: var(--color-primary-dark);
+}
+
+a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
