@@ -11,3 +11,4 @@ MAIN MANIFEST FILE
 /* 2. Components */
 @import url('components/navbar.css');
 @import url('components/button.css');
+@import url('components/hero.css');
