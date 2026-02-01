@@ -17,6 +17,7 @@ TYPOGRAPHY AND VARIABLES
     --text-lg: 1.25rem;
     --text-xl: 1.5rem;
     --text-xxl: 2rem;
+    --text-hero: 10rem;
 
     /* Branding colors */
     --color-primary: #F3EEE2;
@@ -83,4 +84,11 @@ a:hover, a:focus {
 a:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 4px;
+}
+
+/* Text utlility classes */
+
+.text-accent {
+    color: var(--color-accent);
+    font-style: italic;
 }

@@ -25,3 +25,10 @@
 
     filter: brightness(0.6) blur(7px);
 }
+
+.hero__title{
+    font-size: clamp(64px, 10vw, var(--text-hero));
+    color: var(--color-primary);
+    font-weight: 500;
+    line-height: 0.9;
+}
