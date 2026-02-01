@@ -1,0 +1,61 @@
+.bento__container {
+    display: grid;
+    width: 100%;
+    gap: var(--spacing-lg);
+    grid-template-columns: repeat(12, 1fr); /* standard 12 columns */
+    grid-auto-rows: 160px; /* 140px to 180px */
+
+    grid-template-areas:
+        "feat feat feat feat feat feat feat feat side side side side"
+        "feat feat feat feat feat feat feat feat side side side side"
+        "feat feat feat feat feat feat feat feat side side side side"
+        "post post post post vide vide vide vide smal smal smal smal"
+        "post post post post vide vide vide vide smal smal smal smal";
+}
+
+.bento__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.bento__img {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 60%;
+}
+
+.bento__item--featured {
+    grid-area: feat;
+}
+
+.bento__item--sidebar {
+    grid-area: side;
+}
+
+.bento__item--poster {
+    grid-area: post;
+}
+
+.bento__item--video {
+    grid-area: vide;
+}
+
+.bento__item--small {
+    grid-area: smal;
+}
+
+@media (max-width: 768px) {
+    .bento {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "feat feat"
+            "feat feat"
+            "side side"
+            "post vide"
+            "smal smal";
+    }
+}
