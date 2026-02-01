@@ -1,8 +1,9 @@
 .navbar {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(12px); 
     box-shadow: var(--shadow-md);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -28,6 +29,7 @@
 
 .navbar__logo-text{
     font-size: var(--text-xl);
+    font-family: var(--font-display);
     font-weight: 700;
     color: var(--color-primary);
 }

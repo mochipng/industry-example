@@ -5,12 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <script src="js/functions.js" defer></script>
     </head>
 
     <body>
-        <header>
+        <header class=".header">
             <nav class="navbar">
                 <div class="navbar__container">
                     <a href="/" class="navbar__logo" aria-label="Company Name - Home">
@@ -41,6 +45,14 @@
 
         <main>
             <section class="hero">
+                <img
+                    src="media/hero/hero.webp"
+                    alt="Closeup of seasoned fried eggs"
+                    class="hero__bg"
+                    fetchpriority="high"
+                    loading="eager"
+                >
+
                 <div class="hero__container">
                     <h1 class="hero__title">Fresh eggs made <span class="text-primary">your</span> way.</h1>
                     <p class="hero__subtitle">Straight from local farms and onto your plate, no matter how you roll, whenever you please.</p>
