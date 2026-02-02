@@ -38,6 +38,7 @@ TYPOGRAPHY AND VARIABLES
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
+    --spacing-xx: 5rem;
 
     /* Utilities */
     --radius-md: 8px;

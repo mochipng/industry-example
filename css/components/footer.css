@@ -1,0 +1,4 @@
+.footer__container {
+    display: flex;
+    background-color: var(--color-black);
+}

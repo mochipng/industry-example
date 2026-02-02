@@ -1,5 +1,5 @@
 .l-container {
     max-width: 1400px; /* 1200-1400px*/
     margin: 0 auto;
-    padding: 0 var(--spacing-lg);
+    padding: 0 var(--spacing-xx);
 }
