@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <header class=".header"> 
+        <header class="header"> 
             <nav class="navbar">
                 <div class="l-container navbar__container">
                     <a href="/" class="navbar__logo" aria-label="The Eggerie - Home">
@@ -73,13 +73,14 @@
 
             <section class="bento">
                 <div class="l-container bento__container">
+                    <h2 class="sr-only">Images Of Cool Food!</h2>
 
                     <article class="bento__item bento__item--featured">
 
                         <div class="bento__content">
                             <span class="bento__tag">New</span>
-                            <h3 class="bento__title">Vegan Delight Bento</h3>
-                            <p class="bento__text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
+                            <h3 class="bento__item-title">Vegan Delight Bento</h3>
+                            <p class="bento__item-text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
                         </div>
 
                         <div class="bento__media">
@@ -92,8 +93,8 @@
 
                         <div class="bento__content">
                             <span class="bento__tag">New</span>
-                            <h3 class="bento__title">Vegan Delight Bento</h3>
-                            <p class="bento__text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
+                            <h3 class="bento__item-title">Vegan Delight Bento</h3>
+                            <p class="bento__item-text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
                         </div>
 
                         <div class="bento__media">
@@ -106,8 +107,8 @@
 
                         <div class="bento__content">
                             <span class="bento__tag">New</span>
-                            <h3 class="bento__title">Vegan Delight Bento</h3>
-                            <p class="bento__text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
+                            <h3 class="bento__item-title">Vegan Delight Bento</h3>
+                            <p class="bento__item-text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
                         </div>
 
                         <div class="bento__media">
@@ -120,8 +121,8 @@
 
                         <div class="bento__content">
                             <span class="bento__tag">New</span>
-                            <h3 class="bento__title">Vegan Delight Bento</h3>
-                            <p class="bento__text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
+                            <h3 class="bento__item-title">Vegan Delight Bento</h3>
+                            <p class="bento__item-text">A delightful assortment of fresh vegetables, tofu, and plant-based proteins in a beautifully arranged package.</p>
                         </div>
 
                         <div class="bento__media">
@@ -144,6 +145,44 @@
 
                     </article>
 
+                </div>
+            </section>
+
+
+            <section class="carousel">
+                <div class="l-container carousel-container">
+                    <h2 class="carousel__title">Images Of Cool Food!</h2>
+
+                    <div class="carousel__viewport">
+                        <ul class="carousel__list">
+                            <li class="carousel__item" id="slide-1">
+                                <img src="" alt="" class="carousel__image">
+
+                                <div class="carousel__caption">
+                                    <h3 class="carousel__item-title">Mushroom</h3>
+                                    <p class="carousel__price">$22</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="carousel__viewport">
+                        <ul class="carousel__list">
+                            <li class="carousel__item" id="slide-1">
+                                <img src="" alt="" class="carousel__image">
+
+                                <div class="carousel__caption">
+                                    <h3 class="carousel__item-title">Mushroom</h3>
+                                    <p class="carousel__price">$22</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="carousel__nav" aria-label="Carousel Navigation">
+                        <a href="#slide-1" class="carousel__dot" aria-label="Go to slide 1"></a>
+                        <a href="#slide-2" class="carousel__dot" aria-label="Go to slide 1"></a>
+                    </div>
                 </div>
             </section>
         </main>
@@ -215,6 +254,7 @@
             <div class="footer__bottom">
                 <div class="l-container">
                     <p>&copy; 2026 The Eggerie. All rights reserved.</p>
+                    <p class="footer__credits">Photography via <a href="https://pexels.com">Pexels</a></p>
                 </div>
             </div>
         </footer>

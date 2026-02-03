@@ -6,7 +6,7 @@
 
 .footer__container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: var(--spacing-xl);
     padding-bottom: var(--spacing-xl);
     align-items: flex-start;
@@ -57,4 +57,10 @@
 .footer__bottom {
     text-align: center;
     padding: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+    .footer__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
