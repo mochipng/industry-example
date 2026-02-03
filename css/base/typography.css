@@ -89,7 +89,7 @@ a:focus {
 
 /* Text utlility classes */
 
-.text-accent {
+.text--accent {
     color: var(--color-accent);
     font-style: italic;
 }

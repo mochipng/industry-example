@@ -34,7 +34,6 @@
     display: none;
     font-size: var(--text-xl);
     font-family: var(--font-display);
-    font-weight: 700;
     color: var(--color-primary);
 }
 

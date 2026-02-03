@@ -3,14 +3,18 @@
     cursor: pointer;
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--radius-md);
-    transition: 
-        background-color 0.2s ease,
-        color 0.2s ease;
+    
+    transition: transform 0.2s ease;
+    will-change: transform;
+
+    /* Force to use gpu, looks better for animations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .button:hover {
-    background-color: var(--color-black);
-    color: var(--color-primary);
+    transform: scale(1.05);
+    color: var(--color-black);
 }
 
 .button--accent {
