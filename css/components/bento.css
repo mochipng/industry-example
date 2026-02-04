@@ -1,3 +1,9 @@
+.bento {
+    background-color: var(--color-primary-dark);
+    padding-top: var(--spacing-xx);
+    padding-bottom: var(--spacing-xx);
+}
+
 .bento__container {
     display: grid;
     width: 100%;

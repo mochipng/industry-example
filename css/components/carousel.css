@@ -1,0 +1,106 @@
+.carousel {
+    background-color: var(--color-primary);
+    padding-top: var(--spacing-xx);
+    padding-bottom: var(--spacing-xx);
+}
+
+.carousel__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel__title {
+    margin-bottom: var(--spacing-lg);
+}
+
+.carousel__viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel__viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel__list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    list-style: none;
+    gap: var(--spacing-lg);
+}
+
+.carousel__item {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+}
+
+.carousel__figure {
+    position: relative;
+    margin: 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carousel__image:hover {
+    transform: scale(1.05);
+}
+
+.carousel__caption {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    padding: var(--spacing-lg);
+    justify-content: space-between;
+    align-items: flex-end;
+    color: var(--color-primary);
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.carousel__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    opacity: 0.5;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.carousel__dot:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.carousel__dot:active, .carousel__dot:focus {
+    opacity: 1;
+}
+
+@media (min-width: 1024px) {
+    .carousel__item {
+        flex: 0 0 45%;
+    }
+}

@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(12px); 
     box-shadow: var(--shadow-md);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -131,3 +131,102 @@
     }
 }
 
+@media (max-width: 649px) {
+    .navbar__main-section {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-primary); 
+        padding: 120px 40px;
+        z-index: 5;
+
+        /* Animation States */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 
+            opacity 0.4s ease, 
+            visibility 0.4s, 
+            transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .navbar__main-section.navbar__main-section--active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Stack links vertically on mobile */
+    .navbar__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xl);
+    }
+
+    .navbar__link {
+        font-size: 2rem;
+        font-family: var(--font-display); /* Use that nice Serif font */
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    /* Fade in the links when menu is active */
+    .navbar__main-section--active .navbar__link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Staggered Delay: Each link waits a bit longer to appear */
+    .navbar__item:nth-child(1) .navbar__link { transition-delay: 0.1s; }
+    .navbar__item:nth-child(2) .navbar__link { transition-delay: 0.2s; }
+    .navbar__item:nth-child(3) .navbar__link { transition-delay: 0.3s; }
+    .navbar__item:nth-child(4) .navbar__link { transition-delay: 0.4s; }
+}
+
+.navbar__hamburger {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.navbar__hamburger-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    /* Center the rotation point for a perfect X */
+    transform-origin: center; 
+}
+
+/* Initial positions */
+.navbar__hamburger-line:nth-child(1) { top: 0; }
+.navbar__hamburger-line:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.navbar__hamburger-line:nth-child(3) { bottom: 0; }
+
+/* The "X" Animation */
+.navbar__hamburger.is-active .navbar__hamburger-line:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.navbar__hamburger.is-active .navbar__hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px); /* Subtle slide out to the left */
+}
+
+.navbar__hamburger.is-active .navbar__hamburger-line:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}

@@ -21,7 +21,7 @@ TYPOGRAPHY AND VARIABLES
 
     /* Branding colors */
     --color-primary: #F3EEE2;
-    --color-primary-dark: #3730A3;
+    --color-primary-dark: #EBE3CB;
     --color-secondary: #10B981;
     --color-accent: #FFBE30;
     --color-text: #1F2937;
@@ -89,7 +89,18 @@ a:focus {
 
 /* Text utlility classes */
 
-.text--accent {
+.text-accent {
     color: var(--color-accent);
     font-style: italic;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
